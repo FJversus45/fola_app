@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fola_app/extension2.dart';
+import 'package:fola_app/icon_n_words.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -19,200 +20,212 @@ class _DashboardState extends State<Dashboard> {
         child: Column(
           children: [
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Center(
-                  child: Text(
-                    "Dashboard",
-                    style: GoogleFonts.montserrat(
-                      fontSize: 19.74,
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                    ),
+                SizedBox(),
+                SizedBox(),
+                Text(
+                  "Dashboard",
+                  style: GoogleFonts.montserrat(
+                    fontSize: 19.74,
+                    color: Colors.black,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
-                Gap(context.getWidth(0.2)),
-                Image(image: AssetImage("assets/audio.png")),
-                Gap(context.getWidth(0.07)),
-                Image(image: AssetImage("assets/notification.png")),
+
+                Row(
+                  children: [
+                    Image(image: AssetImage("assets/audio.png")),
+                    Gap(8),
+                    Stack(
+                      children: [
+                        Image(image: AssetImage("assets/notification.png")),
+                        Positioned(
+                          top: 0,
+                          right: 2,
+                          child: Container(
+                            color: Color(0xffFD0A0A),
+                            width: 5,
+                            height: 5,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ],
             ),
-            Gap(context.getHeight(0.06)),
-            Flex(
-              direction: Axis.horizontal,
-              children: [
-                Expanded(
-                  child: Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(13.16)),
-                      color: Color(0xFF2A5580),
-                    ),
-                    padding: EdgeInsets.all(12),
-                    child: Column(
-                      children: [
-                        Row(
+            Gap(context.getHeight(0.02)),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(13.16)),
+                color: Color(0xFF2A5580),
+              ),
+              padding: EdgeInsets.all(12),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          border: Border.all(width: 2, color: Colors.white),
+                          borderRadius: BorderRadius.circular(31),
+                        ),
+                        width: 45,
+                        height: 45,
+                        child: ClipOval(
+                          child: Image(image: AssetImage("assets/person.png")),
+                        ),
+                      ),
+                      Gap(8),
+                      Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Container(
-                              decoration: ShapeDecoration(
-                                shape: CircleBorder(),
-                                image: DecorationImage(
-                                  image: AssetImage("assets/person.png"),
-                                ),
+                            Text(
+                              "Good Morning, Ventripay",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.white,
                               ),
-                              width: 45,
-                              height: 45,
                             ),
                             Gap(8),
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    "Good Morning, Ventripay",
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 15,
-                                      fontWeight: FontWeight.w600,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                  Gap(8),
-                                  Text(
-                                    "Last Login  10/10/2024  18:10",
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.white,
-                                    ),
-                                  ),
-                                ],
+                            Text(
+                              "Last Login  10/10/2024  18:10",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
-                        Gap(30),
-                        Center(
-                          child: Container(
-                            padding: EdgeInsets.all(16),
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(6.58),
-                              ),
-                              color: Color(0xFFCCD6E0),
+                      ),
+                    ],
+                  ),
+                  Gap(30),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 45.0),
+                    child: Center(
+                      child: Container(
+                        padding: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(Radius.circular(6.58)),
+                          color: Color(0xFFCCD6E0),
+                        ),
+                        child: Column(
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Image(
+                                      image: AssetImage("assets/check.png"),
+                                    ),
+
+                                    Gap(5),
+                                    Text(
+                                      "Available Balance",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 8,
+                                        fontWeight: FontWeight.w400,
+                                        color: Colors.black,
+                                      ),
+                                    ),
+                                    Gap(5),
+                                    Image(image: AssetImage("assets/eye.png")),
+                                  ],
+                                ),
+                                Text(
+                                  "Transaction History >",
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 8,
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.black,
+                                  ),
+                                ),
+                              ],
                             ),
-                            child: Row(
+                            Gap(8),
+                            Row(
                               children: [
                                 Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Row(
                                       children: [
                                         Image(
-                                          image: AssetImage("assets/check.png"),
-                                        ),
-                                        Gap(2),
-                                        Text(
-                                          "Available Balance",
-                                          style: GoogleFonts.montserrat(
-                                            fontSize: 6.5,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.black,
-                                          ),
+                                          image: AssetImage('assets/small.png'),
                                         ),
                                         Gap(3),
-                                        Image(
-                                          image: AssetImage("assets/eye.png"),
-                                        ),
-                                        Gap(35),
                                         Text(
-                                          "Transaction History >",
+                                          "NGN",
                                           style: GoogleFonts.montserrat(
-                                            fontSize: 6.5,
-                                            fontWeight: FontWeight.w400,
-                                            color: Colors.black,
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color(0xFF707070),
                                           ),
                                         ),
                                       ],
                                     ),
-                                    Gap(15),
-                                    Row(
-                                      children: [
-                                        Column(
-                                          children: [
-                                            Row(
-                                              children: [
-                                                Image(
-                                                  image: AssetImage(
-                                                    'assets/small.png',
-                                                  ),
-                                                ),
-                                                Gap(3),
-                                                Text(
-                                                  "NGN",
-                                                  style: GoogleFonts.montserrat(
-                                                    fontSize: 10,
-                                                    fontWeight: FontWeight.w300,
-                                                    color: Color(0xFF707070),
-                                                  ),
-                                                ),
-                                                Gap(26),
-                                                Image(
-                                                  image: AssetImage(
-                                                    'assets/usd1.png',
-                                                  ),
-                                                ),
-                                                Gap(3),
-                                                Text(
-                                                  "USD",
-                                                  style: GoogleFonts.montserrat(
-                                                    fontSize: 10,
-                                                    fontWeight: FontWeight.w300,
-                                                    color: Color(0xFF707070),
-                                                  ),
-                                                ),
-                                              ],
-                                            ),
-                                          ],
-                                        ),
-                                        Gap(4),
-                                      ],
-                                    ),
-                                    Gap(2),
-                                    Row(
-                                      children: [
-                                        Image(
-                                          image: AssetImage(
-                                            'assets/nairaNo.png',
-                                          ),
-                                        ),
-                                        Gap(6),
-                                        Divider(thickness: 1),
-                                        Gap(6),
-                                        Image(
-                                          image: AssetImage(
-                                            "assets/dollaNo.png",
-                                          ),
-                                        ),
-                                      ],
+                                    Text(
+                                      "₦ 400K",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
-                                Gap(5),
+                                Gap(10),
+                                Container(
+                                  width: 0.7,
+                                  height: 25,
+                                  color: Colors.black,
+                                ),
+                                Gap(10),
                                 Column(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceAround,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Image(
-                                      image: AssetImage('assets/downarrow.png'),
+                                    Row(
+                                      children: [
+                                        Image(
+                                          image: AssetImage('assets/usd1.png'),
+                                        ),
+                                        Gap(3),
+                                        Text(
+                                          "USD",
+                                          style: GoogleFonts.montserrat(
+                                            fontSize: 10,
+                                            fontWeight: FontWeight.w300,
+                                            color: Color(0xFF707070),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      "\$400",
+                                      style: GoogleFonts.montserrat(
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w600,
+                                        color: Colors.black,
+                                      ),
                                     ),
                                   ],
                                 ),
                               ],
                             ),
-                          ),
+                          ],
                         ),
-                      ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             Gap(context.getHeight(0.03)),
             Container(
@@ -303,8 +316,6 @@ class _DashboardState extends State<Dashboard> {
                                     ),
                                   ],
                                 ),
-                                Gap(5),
-                                Image(image: AssetImage("assets/eyeing.png")),
                               ],
                             ),
                           ),
@@ -312,6 +323,8 @@ class _DashboardState extends State<Dashboard> {
                       ),
                     ),
                   ),
+                  Gap(5),
+                  Image(image: AssetImage("assets/eyeing.png")),
                   Gap(5),
                   Center(
                     child: Card(
@@ -354,6 +367,89 @@ class _DashboardState extends State<Dashboard> {
                         ),
                       ),
                     ),
+                  ),
+                  Gap(12),
+                  Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Column(
+                          children: [
+                            Image(image: AssetImage('assets/pluws.png')),
+                            Gap(4),
+                            Text(
+                              "Add",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Gap(14),
+                        Column(
+                          children: [
+                            Image(image: AssetImage('assets/convert.png')),
+                            Gap(4),
+                            Text(
+                              "Convert",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        Gap(14),
+                        Column(
+                          children: [
+                            Image(image: AssetImage('assets/arrowed.png')),
+                            Gap(4),
+                            Text(
+                              "Send",
+                              style: GoogleFonts.montserrat(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w500,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Gap(context.getHeight(0.025)),
+            Container(
+              padding: EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(13.16)),
+                color: Color(0xFFF2F2F2),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconNWords(image: 'assets/airtime.png', words: "Airtime"),
+                      Gap(20),
+                      IconNWords(image: 'assets/data.png', words: "Data"),
+                      Gap(15),
+                      IconNWords(
+                        image: 'assets/virtualcards.png',
+                        words: "Virtual Cards",
+                      ),
+                      Gap(15),
+                      IconNWords(
+                        image: 'assets/giftcards.png',
+                        words: "Gift Cards",
+                      ),
+                    ],
                   ),
                 ],
               ),
