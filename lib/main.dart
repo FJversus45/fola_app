@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fola_app/onboarding.dart';
+import 'package:fola_app/modules/onboarding/views/onboarding.dart';
 
 void main() {
   runApp(const MyApp());

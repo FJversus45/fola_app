@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:fola_app/country_page.dart';
-import 'package:fola_app/extension2.dart';
-import 'package:fola_app/onboarding_data.dart';
-import 'package:fola_app/onboarding_widget.dart';
+import 'package:fola_app/modules/authentication/views/signup/country_page.dart';
+import 'package:fola_app/core/utils/extension2.dart';
+import 'package:fola_app/modules/onboarding/models/onboarding_data.dart';
+import 'package:fola_app/modules/onboarding/widgets/onboarding_widget.dart';
 import 'package:gap/gap.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
