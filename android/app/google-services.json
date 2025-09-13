@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "895803487361",
+    "project_id": "fola-app",
+    "storage_bucket": "fola-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:895803487361:android:99ecc1abfa67444e4fc980",
+        "android_client_info": {
+          "package_name": "com.example.fola_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHF5H-d1vH68GSfC6th47ZqQcEiFUojU0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

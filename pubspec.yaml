@@ -38,6 +38,7 @@ dependencies:
   gap: ^3.0.1
   smooth_page_indicator: ^1.2.1
   fl_country_code_picker: ^0.1.9+1
+  firebase_core: ^3.15.1
 
 dev_dependencies:
   flutter_test:
