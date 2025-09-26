@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fola_app/core/shared_widgets/custom_text_field.dart';
-import 'package:fola_app/core/utils/extension2.dart';
-import 'package:fola_app/core/utils/validators.dart';
+import 'package:fola_app/modules/utils/extension2.dart';
+import 'package:fola_app/modules/utils/validators.dart';
 import 'package:fola_app/modules/authentication/views/login/email_address_login.dart';
 import 'package:fola_app/modules/authentication/widgets/better_check_box.dart';
 import 'package:gap/gap.dart';

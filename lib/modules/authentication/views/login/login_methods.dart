@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fola_app/core/utils/extension2.dart';
+import 'package:fola_app/modules/utils/extension2.dart';
 import 'package:fola_app/modules/authentication/views/login/email_address_login.dart';
 import 'package:fola_app/modules/authentication/views/login/phone_number_login.dart';
 import 'package:fola_app/modules/onboarding/views/onboarding.dart';

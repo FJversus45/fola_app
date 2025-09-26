@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fola_app/core/utils/extension2.dart';
+import 'package:fola_app/modules/utils/extension2.dart';
 import 'package:fola_app/modules/home/widgets/dashboar_detail_card.dart';
 import 'package:fola_app/modules/home/widgets/dashboard_action_container.dart';
 import 'package:fola_app/modules/home/widgets/dashboard_bottom_navigation_bar.dart';

@@ -1,6 +1,7 @@
 enum PasswordValidationError {
   empty(
-    "Password must be 8+ characters with an uppercase letter, a number,\n and a special character.",
+    'Password must be at least 8 characters and must\ncontain at least '
+    'an uppercase character, a number\nand a special character.',
   ),
   tooShort('Password must be at least 8 characters'),
   noCapitalLetter('Password must contain at least an uppercase character'),
@@ -12,35 +13,6 @@ enum PasswordValidationError {
   final String errorText;
 }
 
-// enum means constant value
-
-// enum UserRole {admin,user,student,tutor}
-
-enum UserRole {
-  admin,
-  user,
-  student,
-  tutor
-}
-
-enum FromScreen {
-  paymentScreen,
-  loginScreen,
-  signupScreen
-}
-
-// static means that the variable or method belongs to the class
-// not the instance or object of the class
-
-// regex
-
-// Assignment 1
-// go online and DO EXTENSIVE research about regex
-// write a discourse of nothing less than 3 paragraph about regex
-// regex means regualr expression
-// the first 3 paragraughs is aobut regex
-// another paragraugh on regex in dart
-
 class Validators {
   static bool isNumeric(String number) {
     return double.tryParse(number) != null;
@@ -50,9 +22,7 @@ class Validators {
     return (String? value) {
       value = harmonize(value);
       final regex = RegExp(r"^[0-9]");
-      if (value.startsWith("0")) {
-        return "please remove leading '0' from number";
-      }
+
       if (!isNumeric(value)) {
         return 'Enter valid phone number';
       }
@@ -80,11 +50,8 @@ class Validators {
     return null;
   }
 
-  static String? Function(String?) validateString({
-    int minLength = 1,
-    int? maxLength,
-    String? error,
-  }) {
+  static String? Function(String?) validateString(
+      {int minLength = 1, int? maxLength, String? error}) {
     return (String? value) {
       value = harmonize(value);
 
@@ -112,18 +79,7 @@ class Validators {
 
   static String? Function(String?) validatePassword({int minLength = 8}) {
     return (String? value) {
-
-
-      // true and true = true
-      // true and false = false
-      //false and true = false
-      // false and flase = false
-      // true or true = true
-      // TRUE OR FALSE = TRUE
-      // FALSE OR TRUE = TRUE
-      // FALSE OR FALSE = FALSE
-
-      // final value = this
+      // final value = this;
       if (value == null) {
         return PasswordValidationError.empty.errorText;
       } else if (value.isEmpty) {

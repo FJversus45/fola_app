@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fola_app/core/shared_widgets/custom_text_field.dart';
-import 'package:fola_app/core/utils/validators.dart';
+import 'package:fola_app/modules/utils/validators.dart';
 import 'package:fola_app/modules/authentication/views/re-verification/verify_dob.dart';
 import 'package:fola_app/modules/authentication/widgets/e_z_button.dart';
 import 'package:fola_app/modules/authentication/widgets/top_header_and_percentage.dart';

@@ -12,7 +12,20 @@
           "package_name": "com.example.fola_app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "895803487361-1onfbj964bq9e4l5mbl4e8uj7147augd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fola_app",
+            "certificate_hash": "0e53140e9ad303b228c82871e2aedfd0bc1cf473"
+          }
+        },
+        {
+          "client_id": "895803487361-n25ldb82o2r14qka2lbslqs71af6bmna.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBHF5H-d1vH68GSfC6th47ZqQcEiFUojU0"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "895803487361-n25ldb82o2r14qka2lbslqs71af6bmna.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "895803487361-7b0c77pk7r6ip90fdrf4p71r0d003fl2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.folaApp"
+              }
+            }
+          ]
         }
       }
     }

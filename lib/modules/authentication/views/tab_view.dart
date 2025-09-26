@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fola_app/modules/authentication/views/card%20tabs/physical_card.dart';
+import 'package:fola_app/modules/authentication/views/card%20tabs/virtual_card.dart';
 
 class TabView extends StatefulWidget {
   const TabView({super.key});
@@ -41,13 +43,7 @@ class _TabViewState extends State<TabView> with SingleTickerProviderStateMixin {
           Expanded(
             child: TabBarView(
               controller: controller,
-              children: [
-                Text("Virtual Card"),
-                ElevatedButton(
-                  onPressed: () => showBottomSheet(context),
-                  child: Text("Show More"),
-                ),
-              ],
+              children: [VirtualCard(), PhysicalCard()],
             ),
           ),
         ],

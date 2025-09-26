@@ -48,7 +48,7 @@ class CardPerks extends StatelessWidget {
             ),
           ],
         ),
-        Gap(8),
+        Gap(14),
       ],
     );
   }
